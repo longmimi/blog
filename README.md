@@ -1,5 +1,5 @@
 # 博客
 
-![logo](https://hellopan.top/blog/img/logo.png)
+![logo](https://longtean.site/blog/img/logo.png)
 
-欢迎访问： https://hellopan.top/blog/
+欢迎访问： https://longtean.site/blog/
