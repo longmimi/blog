@@ -10,14 +10,14 @@ module.exports = {
         text: "博客",
         items: [
           {
+            text: '前端',
+            link: '/frontend/'
+          },
+          {
             text: "生活",
             link: '/life/'
           }
         ]
-      },
-      {
-        text: '关于',
-        link: '/about/'
       },
       {
         text: 'Github',
