@@ -5,6 +5,6 @@ heroText: ' '
 tagline: ' '
 heroImage: /img/logo.png
 actionText:  发现更多
-actionLink: /index/
+actionLink: /frontend/
 footer: Copyright©  LongTean-2019
 ---

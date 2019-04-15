@@ -14,8 +14,8 @@ module.exports = {
             link: '/frontend/'
           },
           {
-            text: "生活",
-            link: '/life/'
+            text: "其他",
+            link: '/index/'
           }
         ]
       },
