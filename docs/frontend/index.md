@@ -6,7 +6,7 @@
 
 > 不积跬步 无以至千里
 
-### Taro
+## Taro
 
-* [初见Taro](/frontend/taro/taro-init.md)
+[初见Taro](/frontend/taro/taro-init.md)  
 

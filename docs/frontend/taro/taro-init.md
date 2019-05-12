@@ -3,7 +3,6 @@ sidebar: auto
 prev: false
 ---
 
-# 初见Taro
 
 > [Taro](https://taro.aotu.io/)是京开源的一套遵循 React 语法规范的多端统一开发框架，经过一段时间的学习使用，总结一些比较基础的知识
 
