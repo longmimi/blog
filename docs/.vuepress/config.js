@@ -10,12 +10,16 @@ module.exports = {
         text: "博客",
         items: [
           {
-            text: '前端',
+            text: '前端文章',
             link: '/frontend/'
           },
           {
-            text: "其他",
-            link: '/index/'
+            text: "电影记录",
+            link: '/movie/'
+          },
+          {
+            text: "读书笔记",
+            link: '/books/'
           }
         ]
       },

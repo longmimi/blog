@@ -4,7 +4,7 @@ prev: false
 ---
 
 
-> [Taro](https://taro.aotu.io/)是京开源的一套遵循 React 语法规范的多端统一开发框架，经过一段时间的学习使用，总结一些比较基础的知识
+> [Taro](https://taro.aotu.io/)是京开源的一套遵循 React 语法规范的多端统一开发框架，经过一段时间的学习使用，总结下基础使用
 
 
 ##  与React的差异
@@ -59,7 +59,7 @@ Taro 在小程序端实际上把 JSX 转换成了字符串模板，而一个原�
 
 微信小程序的 [自定义组件样式](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html)默认是不受外部样式影响的。，如果在页面中引入了自定义组件，然后直接写样式是不生效的
 
-### 给组件设置 <span style="color:red">defaultProps</span>
+### 给组件设置 `defaultProps`
 
 在微信小程序端的自定义组件中，只有在 `propertries`中制定的属性，才能从父组件传入并接收
 而在Taro中，对于组件代码中使用到的来自 `props`的属性，会在编译时识别并加入到编译后的`propertries`中，但是可能会有某一属性没有使用而直接传给子组件，这种情况在编译时处理不到的，因此需要在写代码时给组件设置默认属性
