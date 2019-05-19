@@ -4,10 +4,12 @@ prev: false
 ---
 
 
+# Taro基础使用及注意
+
+
 > [Taro](https://taro.aotu.io/)是京开源的一套遵循 React 语法规范的多端统一开发框架，经过一段时间的学习使用，总结下基础使用
 
-
-##  与React的差异
+## 与React的差异
 
 由于微信小程序的限制，React 中某些写法和特性在 Taro 中还未能实现
 

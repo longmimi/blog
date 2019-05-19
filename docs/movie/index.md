@@ -1,5 +1,16 @@
 # 电影是世界的一面镜子🎬
 
+[调音师 Andhadhun (2018))](https://movie.douban.com/subject/30334073/)
+
+剧情跌宕起伏，充满反转，可以说是去上个厕所回来就懵逼的电影，看起来很过瘾，事后看了挺多剧情分析，细思极恐啊，片中没有绝对的好人坏人，在利益面前，人性算什么  *——2019-05-18*
+
+---
+
+[大侦探皮卡丘 Pokémon Detective Pikachu (2019))](https://movie.douban.com/subject/26835471/?from=showing)
+
+也想有一只自己的宝可梦诶  *——2019-05-13*
+
+---
 
 [追龙 追龍 (2017)](https://movie.douban.com/subject/26425068/)
 
