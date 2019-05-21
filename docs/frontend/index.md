@@ -16,4 +16,4 @@
 
 ## JavaScript
 
-
+[节流和防抖](/frontend/javascript/debounce-throttle.md)
