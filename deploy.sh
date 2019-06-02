@@ -15,7 +15,15 @@ git commit -m 'deploy'
 
 git push -f git@github.com:longmimi/blog.git master:gh-pages
 
+commitTime=`date +%Y-%m-%d/%H:%M:%S`
+commitHead='🌈 Upd:'
+commitInfo=$*
+
 cd ../../../
 git add -A
-git commit -m 'upd'
+git commit -m "${commitHead} ${commitInfo} ${commitTime}"
 git push origin master
+
+echo Done
+
+
