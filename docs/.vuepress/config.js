@@ -20,6 +20,10 @@ module.exports = {
           {
             text: "读书笔记",
             link: '/books/'
+          },
+          {
+            text: "采坑日记",
+            link: '/solve/'
           }
         ]
       },
