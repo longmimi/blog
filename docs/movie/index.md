@@ -1,5 +1,17 @@
 # 电影是世界的一面镜子🎬
 
+[看不见的客人 Contratiempo (2016)](https://movie.douban.com/subject/26580232/)
+
+这部片子很早之前就看过影评，时隔一年之后，我觉得自己基本已经忘了当时的剧情分析了，然而图样图森破，刚看了几分钟就想起来了，可以说是带着结局看完的。。。   *——2019-6-7*
+
+---
+
+[海市蜃楼 Durante la tormenta (2018)](https://movie.douban.com/subject/30164448/)
+
+不明白片名和内容之间有什么联系，但是结局真的很精彩。   *——2019-6-6*
+
+---
+
 
 [阿丽塔：战斗天使 Alita: Battle Angel (2019)](https://movie.douban.com/subject/1652592/)
 
