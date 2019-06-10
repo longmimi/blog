@@ -480,6 +480,174 @@ module.exports = {
 再次npm run build之后，文件都被压缩了
 
 
+## 处理js
+
+### 1. **处理es6+**
+
+在index.js中写一些es6的语法，在build之后发现打包出来的js仍旧使用ES6写法，为了兼容性，我们需要转化成ES5的写法，这时候需要安装`babel`
+
+```js
+npm i babel-loader @babel/core @babel/preset-env -D
+```
+
+修改配置文件
+```js
+module.exports = {
+ ...
+  module:{//模块
+    rules:[{
+        test:/\.js$/,
+        use:{
+          loader:'babel-loader', 
+          options:{
+            presets:[
+              '@babel/preset-env'
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
+```
+之后npm run build之后就可以将es6代码转化成es5代码了
+
+接下来往index.js增加
+```js
+class A{
+    a=1;
+}
+let a = new A()
+console.log(a.a)
+```
+`npm run build`之后发现提示需要安装`@babel/plugin-proposal-class-properties`插件，这是因为class属性目前处于提案中，所以babel通过单独插件的方式来支持编译。
+
+安装这个插件之后修改配置文件
+```js
+module.exports = {
+ ...
+  module:{//模块
+    rules:[{
+        test:/\.js$/,
+        use:{
+          loader:'babel-loader', 
+          options:{
+            presets:[
+              '@babel/preset-env'
+            ]，
+            
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+如果我们要使用装饰器模式的话，需要安装插件`@babel/plugin-proposal-decorators`
+
+```js
+@log
+
+class A{
+  a = 1;
+}
+let a = new A()
+console.log(a.a)
+
+function log(target){
+  console.log(target)
+}
+```
+
+修改配置文件
+
+```js
+module.exports = {
+ ...
+  module:{//模块
+    rules:[{
+        test:/\.js$/,
+        use:{
+          loader:'babel-loader', 
+          options:{
+            presets:[
+              '@babel/preset-env'
+            ]，
+            plugins:[
+              //注意安装顺序
+              ["@babel/plugin-proposal-decorators", { "legacy": true }],
+              '@babel/plugin-proposal-class-properties'
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+在test.js 写另外一个Class B，同时也写一些处理异步流程的Generator语法
+```js
+class B{
+
+}
+
+function * gen(params){
+  yield 1;
+}
+ 
+console.log(gen().next())
+
+```
+
+打包之后，发现虽然将ES6转化为了ES5的语法，但是gemerator这中内置api并没有转化，所以需要安装插件`@babel/plugin-transform-runtime`,以及在生产环境下注入一些脚本依赖的插件`@babel/runtime`，通过创建了一个helper方法将需要用到的公共方法抽离出来，避免了多个模块定义重复定义方法。
+
+如果代码中存在一些实例上的方法，比如说数组的includes(),在编译的过程中是不会进行转化的，需要安装`@babel/polyfill`,因为需要在代码运行时使用，所以不能`--save-dev`来安装，插件会在Array的原型上重新实现个includes方法。
+
+安装之后，修改配置文件
+
+```js
+import "@babel/polyfill";
+
+module.exports = {
+  entry: ["@babel/polyfill", "./src/index.js"] 
+};
+```
+
+通过在入口文件添加polyfill插件，为打包之后的代码插入在原有的JS内置对象及方法上做向后兼容的处理的代码。比如说ES5里面的 Object 是没有自带 assign 方法的，那么你加载了babel-polyfill 之后，它就给 Object 扩展了一个 assign 方法，这样你就可以直接使用 Object.assign(obj1, obj2) 了
+
+### 2. **增加eslint**
+
+添加eslint可以对我们的代码添加一些语法规范的校验
+
+安装 `npm i eslint eslint-loader -D`
+
+在配置文件中添加loader
+```js
+module.exports = {
+    ...
+    module:{
+        rules:[
+        {
+            test:/\.js$/,
+            use:{
+                loader:'eslint-loader',
+                options:{
+                    enforce:pre //强制在最前面执行，最先执行的loader
+                }
+            }
+        }
+       ]
+    }
+}
+```
+
+可以在eslint官网根据自己的需求勾选不同的规则，最终生成`.eslintrc.json`文件放置在项目的根目录中。
+
+## 全局变量引入
+
+
 
 
 
