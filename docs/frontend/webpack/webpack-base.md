@@ -648,6 +648,70 @@ module.exports = {
 ## 全局变量引入
 
 
+### 暴露到全局对象上
+想要全局引用某个变量，需要用到`expose-loader`
+
+```
+npm  i expose-loader -D
+```
+
+在index.js中引入 jquery的 `$` 并暴露给window对象
+
+```
+import 'expose-loader?$!jquery'
+
+console.log(window.$)
+```
+
+npm run dev 之后控制台可以打印出$对象
+
+也可以再webpack配置文件中添加
+
+```js
+{
+    ...
+    rules:[
+        {
+            test:require.resolve('jquery'), //匹配模块中对jq的引用
+            use:'expose-loader?$'  //暴露给全局的window.$
+        }
+    ]
+}
+```
+
+这种方式需要在使用的文件中手动的import jquery,还有另外一种方式，可以将$注入到每个模块中这样我们就可以任意的使用$而不需要手动引入了
+
+### 注入到每个模块
+
+需要使用到webpack的插件 在配置文件的plugin中添加
+```js
+const webpack = require('webpack')
+plugins: [
+    new webpack.ProvidePlugin({ //在每个模块中都注入$
+      $:'jquery'
+    })
+]
+```
+
+### 引入不打包
+
+如果我们通过import等引入了jq,但不希望webpack把这个库打包进bundle,js  就可以使用`externals`,在配置文件中添加
+
+```js
+{
+    ...
+    externals:{
+        jquery:'$' //引入$ 不打包
+    }
+}
+```
+这种方式就需要依赖运行环境包含`$`
+
+
+> 总结 <br>
+> 1.expose-loader 暴露到window上  <br>
+> 2.webpack.ProvideOlugin 注入到每个模块 <br>
+> 3.引入不打包 <br>
 
 
 
