@@ -713,7 +713,64 @@ plugins: [
 > 2.webpack.ProvideOlugin 注入到每个模块 <br>
 > 3.引入不打包 <br>
 
+## 图片处理
 
+在js中通过import或者require来引入图片，是一个字符串，并不能被webpack识别，需要使用`file-loader`来处理图片的路径
+
+```js
+npm i file-loader -D
+```
+
+在配置文件中添加
+```js
+{
+    rules:[
+        {
+            test:/.\(jpg,png,gif)$/,
+            //css中引入的图片会被css-loader处理成require方式引入
+            use:'file-loader'
+        }
+    ]
+}
+```
+
+如果想要在HTML文件中引入图片，需要使用loader `html-withimg-loader`,解析出html中的图片引入
+
+安装之后配置rules
+```js
+{
+    rules:[
+        {
+            test:/\.html$/,
+            use:'html-withimg-loader'
+        }
+    ]
+}
+```
+
+开发中图片很多，一些比较小的图片可以转化成base64格式，从而减少http请求，需要用到`url-loader`
+
+安装之后修改配置文件
+```js
+{
+    rules:[
+        {
+            test: /\.(png|jpg|gif)$/,
+			// 当图片小于200k时转化为base64格式
+			// 大于则使用url-loader内置的file-loader处理
+			use: {
+				loader: 'url-loader',
+				options: {
+					limit: 200*1024,
+					outputPath:'/img/', 
+					PubilcPath:'https://daojia.jd.com' 
+					
+				}
+			}
+        }
+    ]
+}
+```
 
 
 
