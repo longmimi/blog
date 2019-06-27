@@ -773,6 +773,57 @@ npm i file-loader -D
 ```
 
 
+## 打包多页应用
+
+之前的配置都是针对单页面应用，接下来配置多页面应用。
+
+src下新建index.js 和 other.js两个文件
+
+```js
+const path = require('path')
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+module.exports = {
+    mode:'development',
+    //多入口
+    entry:{
+        home:'./src/index.js',
+        pther:'./src/other.js'
+    },
+    output:{
+        filename:'[name].[hash]js',
+        path:path.resolve(__dirname,'dist')
+    },
+    //需要配置多个 HTMLWebpackPlugin  chunks 表示页面的入口文件
+    plugins:[
+        new HTMLWebpackPlugin({
+            template:'./src/index.html',
+            filename:'home.html',
+            chunks:['home']
+        }),
+        new HTMLWebpackPlugin({
+            template:'./src/other.html',
+            filename:'other.html',
+            chunks:['other','home'] //写多个，会引用多个js
+        })
+    ]
+}
+```
+
+## source-map
+
+打包之后，代码压缩成一行，如果代码有错误，我们很难在压缩后的代码中定位到错误，这个时候就需要通过webpack的devtool配置来进行源码的映射。
+
+```js
+module.exports = {
+    ...
+    devtool:'source-map', //增加映射文件，方便调试源码，会生成一个sourcemap文件，显示错误的行和列
+    //devtool:'eval-source-map'  不会产生单独source-map 文件，集成在代码中
+    //devtool:'cheap-module-source-map' 产生单独的source-map 不会提示错误在第几行
+    //devtool:'cheap-module-eval-source-map'  不会产生文件，不提示列，只提示行
+}
+```
+
+
 
 
 
