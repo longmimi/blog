@@ -823,6 +823,26 @@ module.exports = {
 }
 ```
 
+## watch 实时打包
+
+通过打开watch属性是实现时时打包,这样就可以真机调试了
+
+```js
+{
+    ...
+    watch:true,
+    watchOptions:{
+        poll:1000,  监控的间隔时间,一秒检查一次是否需要打包
+        aggregateTimeout:500 // 防抖，输入500毫秒后无输入再打包
+        ignore:/node_modules/ //不需要监控的文件
+    }
+}
+```
+
+这样每次都改之后都会自动重新打包
+
+
+
 
 
 
