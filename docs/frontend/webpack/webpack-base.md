@@ -841,6 +841,82 @@ module.exports = {
 
 这样每次都改之后都会自动重新打包
 
+## 插件
+
+* CleanWebpackPlugin
+
+ 作用是打包之前清空dist目录
+ 
+ ```js
+ const CleanWebpackPlugin = require('clean-webpack-plugin');
+ 
+ module.exports = {
+     ...
+     plugins:[
+        new CleanWebpackPlugin('./dist')
+     ]
+ }
+ ```
+ 
+ * CopyWebpackPlugin
+
+ 作用是打包时复制文件到打包的目录
+ 
+ ```js
+ const CopyWebpackPlugin = require('copy-webpack-plugin');
+ 
+ module.exports = {
+     ...
+     plugins:[
+        new CleanWebpackPlugin([
+        { from:'./public',to:'./'} //从哪拷贝到哪
+        ])
+     ]
+ }
+ ```
+ 
+
+* BannerPlugin (内置)
+
+作用是给打包后的js和css文件头部添加注释
+
+```js
+new webpack.BannerPlugin('我是需要添加的注释')
+```
+
+## 跨域问题
+
+开发过程中都是localhost本地服务，就会遇到接口请求的跨域问题。
+
+一、可以通过webpack配置devServer.proxy设置代理
+
+```js
+...
+proxy:{
+    'api/':{
+        target:'baidu.com', //需要代理到的url
+        pathRewrite:{
+            '/api':''  //将/api重写
+        }
+    }
+}
+
+```
+
+二、如果前端需要mock数据,可以利用webpack内置的express 服务器
+
+```js
+devServer:{
+    before(app){
+        app.get('/api',(req,res)=>{
+            res.json({
+                xxx:xxx
+            })
+        })
+    }
+}
+```
+
 
 
 
