@@ -918,6 +918,27 @@ devServer:{
 ```
 
 
+## resolve 
+
+resolve可以解析第三方的包
+
+```js
+module.exports = {
+    ...
+    rules:[],
+    resolve:{
+        modules:[path.resolve('node_modules')], //指定优先查找当前目录的node_modules
+        alias:{
+            //配置别名
+            'bootstrap':'./dist/js/...'
+        },
+        extensions:['js','css','jsx','vue'], //按照这个顺序查找后缀的文件
+        mainFields:['main','style','css'], //引用的文件的主入口字段，对应packages.json
+        mainFiles:['main'],  //主入口文件的名字 默认是index
+    }
+}
+```
+
 
 
 
