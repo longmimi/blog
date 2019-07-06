@@ -1,10 +1,11 @@
 ---
 sidebar: auto
 prev: false
+next: ./webpack-optimize
 ---
 
 
-# 基础篇
+# webpack基础配置
 
 ## 安装
 
@@ -937,6 +938,67 @@ module.exports = {
         mainFiles:['main'],  //主入口文件的名字 默认是index
     }
 }
+```
+
+
+## 定义环境变量
+
+```js
+{
+    plugins:[
+        new webpack.DefinePlugin({
+			DEV: "'dev'", // JSON.stringify('dev')
+			TAG:'true' //boolean 类型
+		})
+	]
+}
+```
+
+## 区分不同环境
+
+可以将不同环境的配置文件分开写
+
+* webpack.dev.js
+* webpack.base.js
+* webpack.prod.js
+
+base写基础的配置，通过插件 webpack-merge 来合并到dev 和 prod 文件中
+
+webpack.dev.js
+
+```js
+let { smart } = require('webpack-merge')
+let base = require('./webpack.base.js')
+
+module.exports = smart(base,{
+    mode:'development',
+    // 其他配置
+})
+```
+
+
+webpack.prod.js
+
+```js
+let { smart } = require('webpack-merge')
+let base = require('./webpack.base.js')
+
+module.exports = smart(base,{
+    mode:'production',
+    // 其他配置
+})
+
+```
+
+修改project.json 中 脚本执行命令 
+```js
+{
+    "scripts":{
+        "dev":"webpack --config webpack.dev.js",
+        "build":"webpack --config webpack.prod.js"
+    }
+}
+
 ```
 
 
