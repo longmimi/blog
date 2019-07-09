@@ -1,5 +1,6 @@
 # 电影是世界的一面镜子🎬
 
+<img src="https://s2.ax1x.com/2019/07/09/Z6NSHS.md.png" alt="ZsauYd.png" border="0" />
 
 [雷霆沙赞！ Shazam! (2019)](https://movie.douban.com/subject/2244426/)
 

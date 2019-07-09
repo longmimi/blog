@@ -116,3 +116,56 @@ module.exports = {
 ```
 
 
+## happypack
+
+happypack 可以开启多线程打包，这对于比较大的项目，可以提高打包速度。
+
+`npm i happypack -D`
+
+```js
+const happypack = require('happypack')
+
+module.exports = {
+    plugins:[
+        new happypack({
+            id:'js',
+            use:[{
+                loader:'babel-loader',
+                options:{
+                    preset:['@babel/preset-env']
+                }
+            }]
+        }),
+        new happypack({
+            id:'css',
+            use:[
+                MiniCssExtractPlugin.loader,
+				'css-loader',
+				'postcss-loader'
+			]
+        })，
+    ],
+    module:{
+        rules: [
+		{
+			test: /\.js$/,
+			//js用happypack/loader多线程打包
+			use: 'happypack/loader?id=js',
+			include: path.resolve(__dirname, 'src'),
+			exclude: /node_modules/
+		}, {
+			test: /\.css$/,
+			//css用happypack/loader多线程打包
+			use: 'happypack/loader?id=css',
+			include: path.resolve(__dirname, 'src'),
+			exclude: /node_modules/
+		}]
+    }
+}
+```
+
+由于分配多线程也需要占用时间，因此在比较小的项目上效果不明显。
+
+
+
+
