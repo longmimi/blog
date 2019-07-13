@@ -169,3 +169,23 @@ module.exports = {
 
 
 
+## webpack自带优化
+
+* tree-shaking
+
+通过import 语法引入的模块，在生产环境下，会自动去掉没用到的代码，这就是tree-shking,require不支持
+
+ [Tree-Shaking性能优化实践-原理篇](https://juejin.im/post/5a4dc842518825698e7279a9)
+ 
+[Tree-Shaking性能优化实践 - 实践篇](https://juejin.im/post/5a4dca1d518825128654fa78)
+
+[Webpack4:Tree-shaking深度解析](http://blog.ctomorrow.top/2019/02/15/tree-shaking/)
+
+
+* scope hosting  
+
+作用域提升，可以自动省略，可以简化的代码
+
+[Webpack 3 的新功能：Scope Hoisting](https://zhuanlan.zhihu.com/p/27980441)
+
+
