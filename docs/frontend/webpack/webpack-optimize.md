@@ -197,3 +197,60 @@ module.exports = {
 
 [webpack 4 Code Splitting 的 splitChunks 配置探索](https://imweb.io/topic/5b66dd601402769b60847149)
 
+
+## 懒加载
+
+通过 es6 的 import 语法动态的导入 需要引入的文件
+
+需要安装插件 `@babel/plugin-syntax-dynamic-import`
+
+```js
+module.exports = {
+    module:{
+        rules:[
+            {
+                test:/\.js$/，
+                use:{
+                    loader:'babel-loader',
+                    options:{
+                        presets:[
+                            '@babel/preset-env',
+                            '@babel/preset-react'
+                        ],
+                        plugins:[
+                            '@babel/plugin-syntax-dynamic-import'
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
+```
+
+
+使用 
+
+```js
+import('./index.js').then(data=>{
+        console.log(data.default)
+    }
+})
+
+```
+
+打包之后发现，webapck将动态引入的文件打包成了 1.js 
+
+
+## 热更新
+
+文件更新之后，不会刷新页面，起到部分刷新的作用
+
+需要两个步骤：
+
+* 使用 HotModuleReplacementPlugin 插件
+* 打开 webpack-dev-server 的热更新开关
+
+Webpack 的热更新，其实只是提供一套接口和基础的模块替换的实现。作为开发者，需要在代码中通过热更新接口（module.hot.xxx）向 Webpack 声明依赖模块和当前模块是否能够更新，以及更新的前后进行的处理。
+
+如果接受更新，那么需要开发者自己来在模块被替换前清理或保留必要的数据、状态，并在模块被替换后恢复之前的数据、状态。
