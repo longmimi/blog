@@ -2,6 +2,13 @@
 
 <img src="https://s2.ax1x.com/2019/07/09/Z6NSHS.md.png" alt="ZsauYd.png" border="0" />
 
+
+[哪吒之魔童降世 (2019)](https://movie.douban.com/subject/26794435/)
+
+国产动画效果越来越棒了    *——2019-07-27*
+
+---
+
 [雷霆沙赞！ Shazam! (2019)](https://movie.douban.com/subject/2244426/)
 
 15岁的超级英雄，刚开始是有些幼稚，导致前半程看起来有些无聊没亮点，后半段才找回了超级英雄的感觉。   *——2019-07-07*
