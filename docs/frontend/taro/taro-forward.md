@@ -1,8 +1,7 @@
 ---
 sidebar: auto
-prev: false
+prev: ./taro-init
 ---
-
 
 
 # Taro设计思想和原理解读

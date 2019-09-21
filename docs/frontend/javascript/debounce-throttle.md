@@ -1,6 +1,6 @@
 ---
 sidebar: auto
-prev: false
+next: ./promise
 ---
 
 # 节流throttle 和 防抖 debounce
@@ -10,9 +10,11 @@ prev: false
 
 ## 1. 防抖
 
-触发高频事件后N秒内只会执行一次，若n秒内再次触发，则重新计算时间
+触发高频事件后N秒内只会执行一次，若n秒内再次触发，则重新计算时间,短期内多次触发,只执行最后一次
 
 思路：每次触发事件时都取消之前的延时调用方法
+
+应用：页面滚动事件
 
 ```js
 function debounce(cb,delay,...args){
@@ -72,7 +74,7 @@ function debounce(fn,wait=50,immdiate=true){
     },wait)
     
     return function(...params){
-        //如果没有创爱你延迟执行函数later，创建一个
+        //如果没有创建延迟执行函数later，创建一个
         if(!later){
             timer = later()
             //如果是立即执行，调用函数
@@ -106,7 +108,7 @@ function debounce(fn,wait=50,immdiate=true){
 
 1.设置时间戳
 
-当触发事件的时候，拿到当前时间戳-之前的时间戳（最初为0）,如果大于时间间隔，那么久执行函数，然后更新时间戳为当前时间戳，否则不执行
+当触发事件的时候，拿到当前时间戳-之前的时间戳（最初为0）,如果大于时间间隔，那么就执行函数，然后更新时间戳为当前时间戳，否则不执行
 ```js
 function throttle(func,wait){
     let context,args,previous=0;

@@ -2,6 +2,24 @@
 
 <img src="https://s2.ax1x.com/2019/07/09/Z6NSHS.md.png" alt="ZsauYd.png" border="0" />
 
+[蜘蛛侠：英雄远征 Spider-Man: Far from Home (2019)](https://movie.douban.com/subject/26931786/)
+
+复联4后的电影，借了一波钢铁侠的情怀，荷兰弟真的惨。    *——2019-09-13*
+
+---
+
+[反贪风暴4 P風暴 (2019)](https://movie.douban.com/subject/27202819/)
+
+希望内地也有icac.....    *——2019-08-18*
+
+---
+
+
+[007：幽灵党 Spectre (2015)](https://movie.douban.com/subject/11620560/)
+
+没有皇家赌场好看。。。。    *——2019-08-17*
+
+---
 
 [哪吒之魔童降世 (2019)](https://movie.douban.com/subject/26794435/)
 

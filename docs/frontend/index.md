@@ -9,6 +9,18 @@
 
 > 不积跬步 无以至千里
 
+## JavaScript
+
+[节流和防抖](/frontend/javascript/debounce-throttle.md)
+
+[Promise 实现原理](/frontend/javascript/promise.md)
+
+[动手实现系列](/frontend/javascript/write-self.md)
+
+[Event Loop]
+
+---
+
 ## Taro
 
 [Taro初见 | 基础使用](/frontend/taro/taro-init.md)  
@@ -19,11 +31,14 @@
 
 ---
 
-## JavaScript
 
-[节流和防抖](/frontend/javascript/debounce-throttle.md)
+## React
+
+[React-Router]
 
 ---
+
+## 设计模式
 
 ## Webpack
 
