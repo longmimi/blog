@@ -7,24 +7,29 @@ module.exports = {
         link: '/'
       },
       {
-        text: "博客",
+        text: '前端文章',
+        link: '/frontend/'
+      },
+      {
+        text: '其他',
+        ariaLabel: 'other menu',
         items: [
           {
-            text: '前端文章',
-            link: '/frontend/'
+            text: "读书笔记",
+            link: '/books/'
+          },
+          {
+            text: "备忘录",
+            link: '/memo/'
           },
           {
             text: "电影记录",
             link: '/movie/'
           },
           {
-            text: "读书笔记",
-            link: '/books/'
-          },
-          {
             text: "踩坑日记",
             link: '/solve/'
-          }
+          },
         ]
       },
       {

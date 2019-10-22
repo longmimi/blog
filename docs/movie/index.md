@@ -2,6 +2,33 @@
 
 <img src="https://s2.ax1x.com/2019/07/09/Z6NSHS.md.png" alt="ZsauYd.png" border="0" />
 
+
+[星河战队 Starship Troopers (1997)](https://movie.douban.com/subject/1295384/)
+
+记得上小学的时候看过一次，里面的很多画面都还记得，现在再看，之前很多没看懂的地方都懂了。    *——2019-10-19*
+
+---
+
+
+[中国机长 (2019)](https://movie.douban.com/subject/30295905/?from=tag_all)
+
+真实事件改编，欧豪真的惨，哈哈哈。ps:看完才知道原来每次起飞前都有这么多的步骤要做。    *——2019-10-18*
+
+---
+
+
+[诛仙 Ⅰ (2019)](https://movie.douban.com/subject/25779217/)
+
+虽然没看过原著，但是通过其他视频对诛仙整个故事都有所了解，唐艺昕演田灵儿真的很入戏诶。    *——2019-09-27*
+
+---
+
+[杀人回忆 살인의 추억 (2003)](https://movie.douban.com/subject/1300299/)
+
+看到新闻说这电影的真实事件破获了，才关注了这部电影，宋康昊演技没得说。    *——2019-09-21*
+
+---
+
 [蜘蛛侠：英雄远征 Spider-Man: Far from Home (2019)](https://movie.douban.com/subject/26931786/)
 
 复联4后的电影，借了一波钢铁侠的情怀，荷兰弟真的惨。    *——2019-09-13*

@@ -2,21 +2,14 @@
 sidebar: auto
 prev: ./debounce-throttle
 ---
-
-
-> 自己动手实现一些常用方法api,增加理解。
-
-## bind
-
-## call
-
-## apply
+  
+> 自己实现一些常用方法和api,增加理解。
 
 ## 数组扁平化
 
 * 递归
-```js
 
+```js
 function flatten(){
   let res = []
   res.map(item=>{
@@ -41,6 +34,36 @@ function flatten(arr){
   }
   return arr
 }
-consolr.log(flatten(arr))
-
+console.log(flatten(arr))
 ```
+
+## instanceof 
+
+核心：向上查找原型链
+```js
+function myInstanceof(target,reference){
+  if(typeof target !== 'object' || target === null) return false;
+  //getProtypeOf能够拿到参数的原型对象
+  let proto = Object.getProtoypeOf(target);
+  white(1){
+    //在原型链顶部没找到
+    if(proto === null) return false;
+    //找到相同的原型对象
+    if(target === reference.prototype) return true;
+    proto = Object.getPrototypeof(proto);
+  }
+}
+
+eg:
+console.log(myInstanceof("111", String)); //false
+console.log(myInstanceof(new String("111"), String));//true
+```
+
+## bind
+
+## call
+
+## apply
+
+
+

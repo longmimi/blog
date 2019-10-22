@@ -11,30 +11,30 @@
 
 ## JavaScript
 
-[节流和防抖](/frontend/javascript/debounce-throttle.md)
+* [节流和防抖](/frontend/javascript/debounce-throttle.md)     :heavy_check_mark:
 
-[Promise 实现原理](/frontend/javascript/promise.md)
+* [Promise 实现原理](/frontend/javascript/promise.md)   
 
-[动手实现系列](/frontend/javascript/write-self.md)
+* [动手实现系列](/frontend/javascript/write-self.md)   
 
-[Event Loop]
+* [Event Loop]()
 
 ---
 
 ## Taro
 
-[Taro初见 | 基础使用](/frontend/taro/taro-init.md)  
+* [Taro初见 | 基础使用](/frontend/taro/taro-init.md)  :heavy_check_mark:
 
-[Taro探索 | 实现原理](/frontend/taro/taro-forward.md)  
+* [Taro探索 | 实现原理](/frontend/taro/taro-forward.md) 
 
-[Taro实战 | 实战开发](/frontend/taro/taro-use.md)  
+* [Taro实战 | 实战开发](/frontend/taro/taro-use.md)  
 
 ---
 
 
 ## React
 
-[React-Router]
+* [React-Router 原理]() 
 
 ---
 
@@ -42,9 +42,9 @@
 
 ## Webpack
 
-[webpack | 基础配置](/frontend/webpack/webpack-base.md)
+* [webpack | 基础配置](/frontend/webpack/webpack-base.md)  :heavy_check_mark: 
 
-[webpack | 优化](/frontend/webpack/webpack-optimize.md)
+* [webpack | 优化](/frontend/webpack/webpack-optimize.md)   :heavy_check_mark:
 
 
 
