@@ -3,6 +3,12 @@
 <img src="https://s2.ax1x.com/2019/07/09/Z6NSHS.md.png" alt="ZsauYd.png" border="0" />
 
 
+[少年的你 (2019)](https://movie.douban.com/subject/30166972/)
+
+校园霸凌主题，看的人牙痒痒，周冬雨和易烊千玺的演技可以的。   *——2019-10-26*
+
+---
+
 [星河战队 Starship Troopers (1997)](https://movie.douban.com/subject/1295384/)
 
 记得上小学的时候看过一次，里面的很多画面都还记得，现在再看，之前很多没看懂的地方都懂了。    *——2019-10-19*
