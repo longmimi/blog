@@ -11,26 +11,12 @@ module.exports = {
         link: '/frontend/'
       },
       {
-        text: '其他',
-        ariaLabel: 'other menu',
-        items: [
-          {
-            text: "读书笔记",
-            link: '/books/'
-          },
-          {
-            text: "备忘录",
-            link: '/memo/'
-          },
-          {
-            text: "电影记录",
-            link: '/movie/'
-          },
-          {
-            text: "踩坑日记",
-            link: '/solve/'
-          },
-        ]
+        text: "读书笔记",
+        link: '/books/'
+      },
+      {
+        text: "电影记录",
+        link: '/movie/'
       },
       {
         text: 'Github',
@@ -38,5 +24,28 @@ module.exports = {
       }
     ]
   },
+  // sidebar: [
+  //   {
+  //     title: '目录',   // 必要的
+  //     path: '/frontend/',      // 可选的, 应该是一个绝对路径
+  //     // collapsable: true, // 可选的, 默认值是 true,
+  //     // sidebarDepth: 2,    // 可选的, 默认值是 1
+  //     // children: [
+  //     // '../../README.md',
+  //     // ]
+  //   },
+  //   {
+  //     title: '源码',   // 必要的
+  //     // path: '/about/',      // 可选的, 应该是一个绝对路径
+  //     collapsable: true, // 可选的, 默认值是 true,
+  //     sidebarDepth: 2,    // 可选的, 默认值是 1
+  //     children: [
+  //     '/sentry/',
+  //     '/lodash/',
+  //     '/underscore/',
+  //     '/jQuery/',
+  //     ]
+  //   }
+  // ],
   serviceWorker: false
 }

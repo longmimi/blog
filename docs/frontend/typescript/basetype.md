@@ -1,8 +1,7 @@
-<!-- ---
+---
 sidebar: auto
 prev: false
-next: ./webpack-optimize
---- -->
+---
 
 
 ## 安装

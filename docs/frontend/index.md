@@ -1,8 +1,7 @@
-
-
-
-# 前端
-
+---
+sidebar: auto
+prev: false
+---
 
 <img src="https://s2.ax1x.com/2019/07/08/ZsUpxP.md.png" />
 
@@ -18,6 +17,8 @@
 * [动手实现系列](/frontend/javascript/write-self.md)   
 
 * [Event Loop]()
+
+* [ cookie整理 ](/memo/cookie.md)
 
 ---
 
@@ -36,6 +37,8 @@
 
 * [React-Router 原理]() 
 
+* [React 高阶组件]() 
+
 ---
 
 ## Typescript 
@@ -46,11 +49,24 @@
 
 ## 设计模式
 
+* [中介者模式]()
+
 ## Webpack
 
 * [webpack | 基础配置](/frontend/webpack/webpack-base.md)  :heavy_check_mark: 
 
 * [webpack | 优化](/frontend/webpack/webpack-optimize.md)   :heavy_check_mark:
+
+
+
+## Git
+
+* [git如何撤销](/memo/git.md)
+
+
+## 踩坑日记 
+
+[踩自己的坑 让别人无坑可踩](/solve/index.md)
 
 
 
