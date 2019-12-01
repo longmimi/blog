@@ -5,6 +5,19 @@ prev: false
 
 <img src="https://s2.ax1x.com/2019/07/08/ZsUpxP.md.png" />
 
+<script>
+  window.onscroll = function() {
+  //为了保证兼容性，这里取两个值，哪个有值取哪一个
+  //scrollTop就是触发滚轮事件时滚轮的高度
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  var Dom = document.querySelector('img')
+  var value =  Math.abs(1-scrollTop/300) > 1 ? 1: Math.abs(1-scrollTop/300)
+  console.log(value)
+  Dom.style.opacity= value
+  // Dom.style.brightness = 0
+  Dom.style.transform = `scale(${value}`
+}
+</script>
 
 > 不积跬步 无以至千里
 
@@ -37,7 +50,7 @@ prev: false
 
 * [React-Router 原理]() 
 
-* [React 高阶组件]() 
+* [React 高阶组件及应用](/front/react/react-HOC.md) 
 
 ---
 

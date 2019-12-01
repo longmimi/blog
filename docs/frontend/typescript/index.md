@@ -10,4 +10,3 @@
 * [函数](/frontend/typescript/function.md)
 * [枚举](/frontend/typescript/enumerate.md)
 * [高级类型](/frontend/typescript/advanced.md)
-* [模块和命名空间](/frontend/typescript/module-namespace.md)
